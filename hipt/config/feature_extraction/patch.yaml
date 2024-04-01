@@ -1,0 +1,28 @@
+data_dir: '/data/pathology/projects/ais-cap/dataset/leander_patches'
+
+output_dir: 'output/debug'
+experiment_name: 'feature_extraction'
+resume: False
+
+patch_size: 512
+mini_patch_size: 16
+
+num_workers: 4
+batch_size: 1
+
+pretrain_vit_patch: 'checkpoints/vit_256_small_dino.pth'
+img_size_pretrained: 256
+
+wandb:
+  enable: False
+  project: ''
+  username: ''
+  exp_name: '${experiment_name}'
+  tags:
+  dir: '/home/user/'
+  group:
+  resume_id:
+
+hydra:
+  run:
+    dir: /tmp/hydra_output
